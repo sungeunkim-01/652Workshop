@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hacker vs Firewall</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="gameContainer">
+
+  <h1 id="gameTitle">HACKER <span>vs</span> FIREWALL</h1>
+
+  <div id="arena">
+
+    <div class="hacker" id="playerSide">
+      <div class="hackerName playerName">Hacker</div>
+      <div class="hackerAvatar">
+        <img src="hacker.png" alt="Hacker" class="hackerImg" />
+      </div>
+      <div class="hpBarWrap">
+        <div class="hpBar"><div id="playerBar" class="hpFill"></div></div>
+        <div class="hpText" id="playerHpText">100 / 100</div>
+      </div>
+    </div>
+
+    <div id="vsCol">
+      <div id="vsLabel">VS</div>
+      <div id="statusBadges">
+        <span id="badgeEncrypt" style="display:none">Encrypted</span>
+        <span id="badgePatch" style="display:none">Patched</span>
+      </div>
+    </div>
+
+    <div class="hacker" id="firewallSide">
+      <div class="hackerName firewallName">Firewall</div>
+      <div class="hackerAvatar">
+        <img src="firewall.png" alt="Firewall" class="hackerImg firewallImg" />
+      </div>
+      <div class="hpBarWrap">
+        <div class="hpBar"><div id="firewallBar" class="hpFill firewallFill"></div></div>
+        <div class="hpText" id="firewallHpText">100 / 100</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="abilityPanel">
+    <button class="abilityBtn bruteBtn" id="btnBrute">
+      <span class="btnName">BRUTE FORCE</span>
+      <span class="btnDesc">Stable damage</span>
+    </button>
+    <button class="abilityBtn encryptBtn" id="btnEncrypt">
+      <span class="btnName">ENCRYPT</span>
+      <span class="btnDesc">-50% next hit</span>
+    </button>
+    <button class="abilityBtn patchBtn" id="btnPatch">
+      <span class="btnName">PATCH SYSTEM</span>
+      <span class="btnDesc">+18 HP & -5 Attack</span>
+    </button>
+    <button class="abilityBtn zerodayBtn" id="btnZeroday">
+      <span class="btnName">ZERO-DAY</span>
+      <span class="btnDesc">High damage / 30% risk</span>
+    </button>
+  </div>
+
+  <div id="logContainer">
+    <div id="logLabel">Battle Log</div>
+    <div id="battleLog"></div>
+  </div>
+
+  <div id="resetRow">
+    <button id="btnReset">Reset</button>
+  </div>
+
+</div>
+
+<div id="gameOverOverlay" style="display:none">
+  <div id="gameOverBox">
+    <div id="overTitle" class="winText">You Win!</div>
+    <div id="overSub">You defeated the Firewall</div>
+    <button onclick="resetGame()">Play Again</button>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/state.js"></script>
+<script src="js/log.js"></script>
+<script src="js/render.js"></script>
+<script src="js/abilities.js"></script>
+<script src="js/firewallTurn.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
