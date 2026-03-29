@@ -1,0 +1,6 @@
+{
+  "name": "652workshop",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
